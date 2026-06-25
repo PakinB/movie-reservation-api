@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.project.movie.model.Movie;
 
+
 @Repository
 public interface MovieRepository extends JpaRepository<Movie, Integer>{
 	
@@ -20,6 +21,8 @@ public interface MovieRepository extends JpaRepository<Movie, Integer>{
 	List<Movie> findByDescription(String description);
 	
 	List<Movie> findByMovieImage(String movieImage);
+	
+	Boolean existsByMovieId(Integer id);
 	
 	Boolean existsByMovieName(String movieName);
 	

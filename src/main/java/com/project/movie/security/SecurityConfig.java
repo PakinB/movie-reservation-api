@@ -32,7 +32,10 @@ public class SecurityConfig {
 				.authorizeHttpRequests(auth -> auth
 						.requestMatchers("/api/auth/**").permitAll()
 						.requestMatchers("/api/movies").permitAll()
-						.requestMatchers("/api/movie/{id}").permitAll()
+						.requestMatchers("/api/movies/{id}").permitAll()
+						.requestMatchers("/api/schedules").permitAll()
+						.requestMatchers("/api/schedules/{id}").permitAll()
+						.requestMatchers("/error").permitAll()
 
 						.requestMatchers("/api/admin/*").hasRole("ADMIN")
 						.requestMatchers("/api/users").hasRole("ADMIN")

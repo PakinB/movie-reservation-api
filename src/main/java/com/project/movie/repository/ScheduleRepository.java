@@ -22,4 +22,6 @@ public interface ScheduleRepository extends JpaRepository<Schedule, Integer>{
 
 	List<Schedule> findByMovieMovieId(Integer movieId);
 	
+	boolean existsById(Integer id);
+	
 }
