@@ -35,6 +35,7 @@ public class SecurityConfig {
 						.requestMatchers("/api/movies/{id}").permitAll()
 						.requestMatchers("/api/schedules").permitAll()
 						.requestMatchers("/api/schedules/{id}").permitAll()
+						.requestMatchers("/api/seats/**").permitAll()
 						.requestMatchers("/error").permitAll()
 
 						.requestMatchers("/api/admin/*").hasRole("ADMIN")
