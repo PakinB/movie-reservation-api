@@ -1,6 +1,9 @@
 package com.project.movie.model;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -57,6 +60,9 @@ public class Ticket {
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
 	private EnumTicketStatus ticketStatus;
+	
+	@CreationTimestamp
+	private LocalDateTime createdAt;
 	
 
 }

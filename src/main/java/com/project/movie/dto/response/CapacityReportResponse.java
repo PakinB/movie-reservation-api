@@ -1,8 +1,6 @@
-package com.project.movie.dto.request;
+package com.project.movie.dto.response;
 
-import java.math.BigDecimal;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -14,14 +12,13 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class TicketRequest {
+public class CapacityReportResponse {
 	
-	@NotNull
-	private Integer seatId;
-	
-	@NotNull
 	private Integer scheduleId;
 	
-	@NotNull
-	private BigDecimal price;
+	private Integer totalSeats;
+	
+	private Integer bookedSeats;
+	
+	private String utilizationPercent;
 }
